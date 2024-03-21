@@ -5,8 +5,8 @@ on:
  
 jobs:
   Runs_the_Python_Program:
-    runs-on: self-hosted
-    # runs-on: ubuntu-latest
+    # runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
 
@@ -14,55 +14,55 @@ jobs:
 
         uses: actions/checkout@v2
  
-      # - name: setup python
+      - name: setup python
 
-      #   uses: actions/setup-python@v2
+        uses: actions/setup-python@v2
 
-      #   with:
+        with:
 
-      #     python-version: '3.11'
+          python-version: '3.11'
 
       - name: run python program
 
         run: python index.py
  
-  # Example_environment_variables:
+  Example_environment_variables:
 
-  #   needs: Runs_the_Python_Program
+    needs: Runs_the_Python_Program
 
-  #   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  #   if: ${{always()}}
+    if: ${{always()}}
 
-  #   env: 
+    env: 
 
-  #     First_name: "Vaibhav"
+      First_name: "Vaibhav"
 
-  #   steps:
+    steps:
 
-  #     - name: Accessing the environment variable
+      - name: Accessing the environment variable
 
-  #       run: echo ${{env.First_name}}
+        run: echo ${{env.First_name}}
  
-  # secret_example:
+  secret_example:
 
-  #   needs: Example_environment_variables
+    needs: Example_environment_variables
 
-  #   runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
 
-  #   steps:
+    steps:
 
-  #     - name: checkout code
+      - name: checkout code
 
-  #       uses: actions/checkout@v2
+        uses: actions/checkout@v2
  
-  #     - name: Use a secret variable
+      - name: Use a secret variable
 
-  #       env: 
+        env: 
 
-  #         SECRET_TOKEN: ${{secrets.MY_SECRET_NAME}}
+          SECRET_TOKEN: ${{secrets.MY_SECRET_NAME}}
 
-  #       run: |
+        run: |
 
-  #           echo "The secret token is $SECRET_TOKEN"
+            echo "The secret token is $SECRET_TOKEN"
 
