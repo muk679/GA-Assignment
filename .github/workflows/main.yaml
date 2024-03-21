@@ -1,16 +1,11 @@
-[Yesterday 13:46] Divpreet Kaur
 name: Python program
  
 on:
-
   workflow_dispatch
  
 jobs:
-
   Runs_the_Python_Program:
-
     runs-on: self-hosted
-
     # runs-on: ubuntu-latest
 
     steps:
