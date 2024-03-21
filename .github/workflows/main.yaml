@@ -24,7 +24,7 @@ jobs:
 
       - name: run python program
 
-        run: python index.py
+        run: python indexx.py
  
   Example_environment_variables:
 
@@ -32,7 +32,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: ${{always()}}
+    # if: ${{always()}}
 
     env: 
 
