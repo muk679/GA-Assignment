@@ -32,7 +32,7 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    # if: ${{always()}}
+    if: ${{always()}}
 
     env: 
 
