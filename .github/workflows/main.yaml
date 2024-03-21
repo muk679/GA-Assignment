@@ -24,7 +24,7 @@ jobs:
 
       - name: run python program
 
-        run: python indexx.py
+        run: python index.py
  
   Example_environment_variables:
 
